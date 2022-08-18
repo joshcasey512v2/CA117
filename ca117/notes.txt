@@ -1,0 +1,229 @@
+#13/01/22
+STRINGS!
+
+"jimmy".replace('m', 'l')
+prints = "jilly"
+
+#18/01/22
+LISTS!
+
+.split() 
+
+[left, right] = email.split("@")
+left = tokens[0]
+right = tokens[1]
+
+.strip("0123456789")
+removes numbers
+
+" ".join(list)
+
+#20/01/22
+throw exception, catch exception
+try:
+
+except whatever:
+    print(error message)
+
+#25/01/22
+list comperhension:
+def extract_odds(numbers):    #old method
+    odds = []
+    for n in numbers:
+        if n % 2 == 1:
+            odds.append(n)
+
+    return odds
+
+print(extract_odds([1,2,3,,4,5,6,7,8]))
+
+def extract_odds(numbers):                     #new method
+    return [n for n in numbers if n % 2 == 1]
+
+print(extract_odds([1,2,3,4,5,6,7,8]))
+output = [1, 3, 5, 7]
+
+
+def non_vowels(s):           #old
+    nvs = []
+    for c in s:
+        if c not in 'aeiou':
+            nvs.append(c)
+    return "".join(nvs)
+
+print(non_vowels([hippopotamus]))
+
+
+def nonvowels(s):
+    return ''.join([c for c in s if c not in 'aeiou'])
+print(non_vowels([hippopotamus]))
+output = hppptms
+
+
+def even_squares(numbers):
+    return [n*n for n in numbers if n % 2 == 0]
+
+def function(str or int):
+    return [output, input, condition]
+
+zip(list_a, list_b)
+output = single joined list
+
+range(1, N+1)
+
+#01/02/22
+DICTIONARYS
+key => values
+syntax = {'key' : 'value', 'josh' : '0851181119'}
+print(syntax[key]) #output = 'value'
+syntax['louie'] = '086 346827' #adds key and value to dictionary
+del(syntax['louie']) # removes key and value
+
+print(phone.keys()) = keys
+print(phone.values()) = values
+print(phone.items()) = keys + values
+
+print('cat' < 'dog') #output = True (alphabetic)
+min = first aplhabetic (a)
+max = last alphabetic  (z)
+
+print(min(list, key=len))
+shortest word = output
+
+print(max(list, key=len)
+longest word = output
+
+
+#03/02/2022
+SETS
+duplicates not allowed
+vowel_set =  set('aeiou')
+sets are itterable
+.remove('item')
+intersection() #&
+set_a | set_b union
+set_a - set_b in a and not b
+<= subset 
+
+#08/02/22
+FUNCTIONS
+def celsius2fahrenheit(c):
+    f = (c * 1.8) + 32
+    print(f'that is {} degreese in fahrenheit')
+f is a local variable to that function
+
+def main():
+    pass (tempory function that does nothing)
+    pass = return None
+use multiple returns to simplify code
+to return multipe things wrap em up in a tuple
+return (this, that)
+
+
+#10/02/22
+FUNCTIONS
+never have a default value as a mutable type
+def funct(animal, list=[]) # dont
+
+
+#17/02/22
+REGULAR EXPRESSIONS
+Defining patterns - r'cat' matches occurences of the pattern 'cat'
+r = raw
+findall() = function that returns list of pattern
+from re inport findall
+findall(what youre looking for, the text)
+s = 'A catatonic cat sat on the mat. Catastrophe!'
+p = r'cat'
+findall(p, s) = [cat, cat]
+p = r'[Cc]at'
+findall(p, s) = [cat, cat, Cat]
+p = r'[^Cc]at' = anything but C or c
+
+Sequence   Matches
+\d = Matches any decimal digit
+\D = Matches any non-digit
+\s = Matches any whitespace character (e.g. space, tab, newline)
+\S = Matches any non-whitespace character
+\w = Matches any alphanumeric character
+\W = Matches any non-alphanumeric character
+\b = Matches any word boundary (a word is an alphanumeric sequence of characters)
+
+Metacharacter  Matches
+^ = Matches the beginning of a string
+$ = Matches the end of a string
+. = Matches any character (except a new line)
+
+p = r'colou?r' = u? is an optional character
+
+p = r'\d{2}[-/]\d{2}[-/]\d{2}'
+print(findall(p, 'Christmas falls on 25-12-21'))
+print(findall(p, "Valentine's Day is 14/02/21"))
+output = ['25-12-21']
+output = ['14/02/21']
+{min, max}
+char* = the repeatign char or char {0, infinity}
+?: turns brackets to normal brackets else its matching 
+
+
+#22/02/22
+OOP - object-oriented programming
+list, str, int = Classes
+their outputs are instances fo the class
+.count(), .strip() = methods
+OOP = making/defining your own class
+
+syntax
+class ClassName(object):
+     pass
+
+eg.
+class Time(object):  attributes = hour, min, sec
+    
+
+    def set_time(time_object, hour, min, sec): = instance method
+        time_object.hour = hour
+        time_object.min = min
+        time_object.sec = sec
+
+    
+    def show_time(time_object):
+        print('{:02d} : {:02d} : {:02d}'.format(time_object.hour, time_object.min, time_object.sec))
+
+#24/02/22
+__init__  (its a special method)
+class __init__(): initializes shit for us
+place holers = class __init__(self, hour=0, min=0, sec=0)
+if no arguments given output = 00:00:00
+__str__(self) (another special method)
+produces string representation of self
+__str__ is to return somthing, shouldnt contain prints
+
+#01/03/22
+OPERATOR OVERLOADING
+__eq__ #checks for the equalist of 2 instances
+def __eq__(self, other):
+    self.goals, self.points == other.goals, other.points
+__gt__ #checks if one instance is greater than the other
+__add__ #adds shit
+s1 += s2 # adds s2 to s1 updating s1
+s3 = s1 + s2 # makes a new instance
+
+
+#08/03/22
+STACKS
+(LIFO) last in, first out
+operations = push(add item) and pop(removes item)
+
+#10/03/22
+RECURSION
+
+#15/03/22
+GRAPHS
+Verticies and edges
+numbers and lines connecting them
+Data structure
+dictionarys, adjacency lists
+
+
+
